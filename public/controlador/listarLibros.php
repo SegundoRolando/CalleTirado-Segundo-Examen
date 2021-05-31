@@ -12,11 +12,7 @@ if(!$link){
       //Sentencia SQL
       $sql= "SELECT * FROM libro";
       $ejecuta_sentencia = mysqli_query($link, $sql);
-      if(!$ejecuta_sentencia){
-          echo'Hay un error en la sentencia SQL:' .mysqli_error();
-      }else{
-          echo'Error al mostrar lista de usuarios:' .mysqli_error();
-       }
+      
     }
 
     }
@@ -35,7 +31,9 @@ if(!$link){
             <tr>
                 <th>Titulo</th>
                 <th>ISBN</th>
-                <th>Numero Pagina</th> <?php
+                <th>Numero Pagina</th> 
+                </tr>
+                <?php
                         while($row=mysqli_fetch_array($ejecuta_sentencia)) {                              
                           echo"<tr>";
                             echo"<td>".$row['lib_nombre']."</td>";
@@ -44,14 +42,11 @@ if(!$link){
                             echo"<td></td>";
                           echo"</tr>";
                         }
-
-                    ?>
-
-            <tr>
+                        ?>
         </table>
+        
     </body>
 </html>
-
 
 
 

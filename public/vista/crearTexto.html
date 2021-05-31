@@ -4,26 +4,26 @@
  <meta charset="UTF-8">
 </head>
 <body>
- <form id="formulario01" method="POST" action="../controlador/crearTexto.php">
- <label for="nombre">nombre (*)</label>
- <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el del texto ..."required/>
- <br> <label for="isbn">ISBN(*)</label>
- <input type="text" id="sbn" name="sbn" value="" placeholder="Ingrese el ISBN ..." required/>
- <br>
- <label for="numpag">Número de Paginas (*)</label>
- <input type="number" id="numpag" name="numpag" value="" placeholder="Ingrese el numero de paginas
-..." required/>
- <br>
-    <div class="input-contenedor">
-        <label for="numpag">Capitulos</label>
-        <select>
-            <option value=""> Seleccione</option>
-            <option value="1"> </option>
 
-        </select>
-    </div>
- <input type="submit" id="crear" name="crear" value="Aceptar" />
- <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+ <form id="formulario01" method="POST" action="../controlador/crearTexto.php">
+    <label for="nombre">nombre </label>
+    <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el del texto ..."required/>
+    <br> <label for="isbn">ISBN</label>
+    <input type="text" id="sbn" name="sbn" value="" placeholder="Ingrese el ISBN ..." required/>
+    <br>
+    <label for="numpag">Número de Paginas </label>
+    <input type="number" id="numpag" name="numpag" value="" placeholder="Ingrese el numero de paginas
+    ..." required/>
+    <br>
+    <label for="autor">Autor</label><br>
+      <select id="autSelect" name="autSelect"></select>
+      <br>
+      <br>
+    <label for="autor">Capitulos</label><br>
+      <select id="capSelect" name="capSelect"></select>    
+
+    <input type="submit" id="crear" name="crear" value="Aceptar" />
+    <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
 
  </form> 
 </body>

@@ -10,7 +10,7 @@ if(!$link){
         echo'No se encontro la base de datos:'.mysqli_error();
     }else{
       //Sentencia SQL
-      $sql= "SELECT * FROM libro";
+      $sql= "SELECT * FROM autor";
       $ejecuta_sentencia = mysqli_query($link, $sql);
       
     }
@@ -23,7 +23,7 @@ if(!$link){
 <html>
 
     <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-        <title>Listado de libros</title>
+        <title>Listado de Autores</title>
         <link rel="stylesheet" href="css/contactos.css">
     </head>
     <body>
@@ -31,16 +31,16 @@ if(!$link){
         <h1>Mostrando Datos</h1>
         <table>
             <tr>
-                <th>Titulo</th>
-                <th>ISBN</th>
-                <th>Numero Pagina</th> 
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nacinalidad</th> 
                 </tr>
                 <?php
                         while($row=mysqli_fetch_array($ejecuta_sentencia)) {                              
                           echo"<tr>";
-                            echo"<td>".$row['lib_nombre']."</td>";
-                            echo"<td>".$row['lib_isbn']."</td>";
-                            echo"<td>".$row['lib_numpag']."</td>";
+                            echo"<td>".$row['aut_nombres']."</td>";
+                            echo"<td>".$row['aut_apellidos']."</td>";
+                            echo"<td>".$row['aut_nacionalidad']."</td>";
                             echo"<td></td>";
                           echo"</tr>";
                         }

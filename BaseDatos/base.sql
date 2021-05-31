@@ -31,8 +31,13 @@ CREATE TABLE `libro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
-INSERT INTO `libro`(`lib_codigo`, `lib_nombre`, `lib_isbn`, `lib_numpag`, `usu_eliminado`, `usu_fecha_creacion`, `usu_fecha_modificacion`, `cap_codigo`, `aut_codigo`) VALUES (1,'Matematica Aplicada','ISBN-22IC333',500,'N','2021-05-30 15:07:56',null,1,1)
-
+INSERT INTO `libro`(`lib_codigo`, `lib_nombre`, `lib_isbn`, `lib_numpag`, `usu_eliminado`, `usu_fecha_creacion`, `usu_fecha_modificacion`, `cap_codigo`, `aut_codigo`) VALUES 
+(4,'Matematica Aplicada','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,7,6), 
+(5,'Razon Fe','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,7,6),
+(6,'Manuelas','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,7,8),
+(7,'Politica Social','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,7,6), 
+(8,'Politica Social','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,7,7), 
+(9,'Manuelas','ISBN-21IC033',500,'N','2021-05-30 15:07:56',null,8,8)
 CREATE TABLE `autor` (
  `aut_codigo` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
  `aut_nombres` varchar(50) NOT NULL,
